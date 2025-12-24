@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- Izinkan HTTP (cleartext) ke domain findemy.xyz -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Domain TIDAK boleh pakai https:// -->
+        <domain includeSubdomains="true">findemy.xyz</domain>
+    </domain-config>
+
+</network-security-config>

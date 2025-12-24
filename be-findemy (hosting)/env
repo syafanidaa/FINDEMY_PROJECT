@@ -1,0 +1,92 @@
+# ========================
+# Aplikasi
+# ========================
+APP_NAME=Laravel                    # Nama aplikasi
+APP_ENV=local                       # Environment: local, production, staging
+APP_KEY=base64:JTzR8jCjlcw6zlabkZmqDbzk68Zu3P+XUwmCRhoomT0=  # Key enkripsi Laravel
+APP_DEBUG=true                      # Debug mode aktif (true) atau mati (false)
+APP_URL=https://findemy.xyz         # URL utama aplikasi
+
+APP_LOCALE=en                        # Bahasa default aplikasi
+APP_FALLBACK_LOCALE=en               # Bahasa cadangan jika bahasa default tidak tersedia
+APP_FAKER_LOCALE=en_US               # Locale untuk data dummy Faker
+
+# ========================
+# Maintenance & PHP
+# ========================
+APP_MAINTENANCE_DRIVER=file          # Driver penyimpanan mode maintenance
+# APP_MAINTENANCE_STORE=database     # Bisa menggunakan database sebagai alternatif
+
+PHP_CLI_SERVER_WORKERS=4             # Jumlah worker saat pakai php artisan serve
+BCRYPT_ROUNDS=12                     # Jumlah ronde hashing password
+
+# ========================
+# Logging
+# ========================
+LOG_CHANNEL=stack                     # Channel log utama
+LOG_STACK=single                      # Jenis channel stack
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug                       # Level log: debug/info/warning/error
+
+# ========================
+# Database
+# ========================
+DB_CONNECTION=mysql                   # Driver database yang digunakan
+DB_HOST=localhost                     # Host database
+DB_PORT=3306                          # Port database
+DB_DATABASE=fins2983_findemy          # Nama database
+DB_USERNAME=fins2983_findemy          # Username database
+DB_PASSWORD=T;^W-%s%?h)jO;8W          # Password database
+
+# ========================
+# Session
+# ========================
+SESSION_DRIVER=database               # Menyimpan session di database
+SESSION_LIFETIME=120                  # Lama session aktif dalam menit
+SESSION_ENCRYPT=false                 # Encrypt session (true/false)
+SESSION_PATH=/                        # Path session
+SESSION_DOMAIN=null                   # Domain session
+
+# ========================
+# Broadcast, Queue & Cache
+# ========================
+BROADCAST_CONNECTION=log              # Driver broadcast
+FILESYSTEM_DISK=local                 # Storage default
+QUEUE_CONNECTION=database             # Driver queue
+CACHE_STORE=database                  # Driver cache
+# CACHE_PREFIX=                        # Prefix cache opsional
+MEMCACHED_HOST=127.0.0.1             # Host memcached
+
+# ========================
+# Redis
+# ========================
+REDIS_CLIENT=phpredis                 # Client Redis
+REDIS_HOST=127.0.0.1                  # Host Redis
+REDIS_PASSWORD=null                   # Password Redis
+REDIS_PORT=6379                        # Port Redis
+
+# ========================
+# Mail
+# ========================
+MAIL_MAILER=smtp                      # Driver mail: smtp
+MAIL_HOST=smtp.gmail.com              # Host SMTP
+MAIL_PORT=587                         # Port SMTP
+MAIL_ENCRYPTION=tls                   # Tipe enkripsi TLS
+MAIL_USERNAME=syafanidakhakiki@gmail.com  # Username Gmail
+MAIL_PASSWORD=kfarccxzrmokwrja        # App password Gmail
+MAIL_FROM_ADDRESS=admin@example.com   # Alamat pengirim default
+MAIL_FROM_NAME="findemy"              # Nama pengirim default
+
+# ========================
+# AWS
+# ========================
+AWS_ACCESS_KEY_ID=                     # AWS Access Key
+AWS_SECRET_ACCESS_KEY=                 # AWS Secret Key
+AWS_DEFAULT_REGION=us-east-1           # Region default
+AWS_BUCKET=                            # Nama bucket S3
+AWS_USE_PATH_STYLE_ENDPOINT=false      # Path style endpoint
+
+# ========================
+# Frontend (Vite)
+# ========================
+VITE_APP_NAME="${APP_NAME}"            # Nama aplikasi untuk Vite (frontend)

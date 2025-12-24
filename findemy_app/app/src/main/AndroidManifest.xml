@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    File AndroidManifest.xml
+    ------------------------
+    File ini adalah konfigurasi utama aplikasi Android.
+    Berisi informasi penting seperti permission, activity,
+    tema aplikasi, icon, dan pengaturan keamanan.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Permission INTERNET
+        -------------------
+        Digunakan agar aplikasi dapat mengakses internet,
+        misalnya untuk API, login, register, atau fetch data.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Permission POST_NOTIFICATIONS
+        -----------------------------
+        Digunakan untuk mengirim notifikasi ke pengguna.
+        Wajib untuk Android 13 (API 33) ke atas.
+    -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!--
+        Permission SCHEDULE_EXACT_ALARM
+        -------------------------------
+        Digunakan untuk menjadwalkan alarm dengan waktu yang sangat presisi.
+        Biasanya dipakai untuk reminder, notifikasi waktu tertentu, dsb.
+    -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <!--
+        Tag <application>
+        -----------------
+        Berisi konfigurasi global aplikasi seperti:
+        - icon
+        - tema
+        - backup
+        - keamanan jaringan
+    -->
+    <application
+        android:allowBackup="true"
+    <!--
+        Mengizinkan sistem melakukan backup data aplikasi
+        (SharedPreferences, database, dll)
+    -->
+
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    <!--
+        Aturan ekstraksi data untuk backup (Android 12+)
+    -->
+
+    android:fullBackupContent="@xml/backup_rules"
+    <!--
+        Mengatur data apa saja yang boleh di-backup
+    -->
+
+    android:icon="@mipmap/ic_launcher"
+    <!--
+        Icon utama aplikasi (launcher icon)
+    -->
+
+    android:label="@string/app_name"
+    <!--
+        Nama aplikasi yang ditampilkan di launcher
+    -->
+
+    android:roundIcon="@mipmap/ic_launcher_round"
+    <!--
+        Icon versi bulat (biasanya untuk device tertentu)
+    -->
+
+    android:supportsRtl="true"
+    <!--
+        Mendukung layout Right-to-Left (RTL)
+        seperti bahasa Arab
+    -->
+
+    android:theme="@style/Theme.FinDemy"
+    <!--
+        Tema utama aplikasi
+    -->
+
+    android:usesCleartextTraffic="true"
+    <!--
+        Mengizinkan komunikasi HTTP (tanpa HTTPS)
+        Biasanya digunakan saat development atau API lokal
+    -->
+
+    android:networkSecurityConfig="@xml/network_security_config">
+    <!--
+        Konfigurasi keamanan jaringan
+        (contoh: mengizinkan domain tertentu, cleartext, dll)
+    -->
+
+    <!--
+        Activity utama aplikasi
+        -----------------------
+        Activity pertama yang dijalankan saat aplikasi dibuka
+    -->
+    <activity
+        android:name=".MainActivity"
+    <!--
+        Nama activity utama
+    -->
+
+    android:exported="true"
+    <!--
+        true karena activity ini memiliki intent-filter
+        dan bisa diakses oleh sistem Android
+    -->
+
+    android:label="@string/app_name"
+    <!--
+        Label activity (judul)
+    -->
+
+    android:theme="@style/Theme.FinDemy">
+    <!--
+        Tema khusus untuk activity ini
+    -->
+
+    <!--
+        Intent-filter
+        -------------
+        Menandakan bahwa MainActivity adalah entry point aplikasi
+    -->
+    <intent-filter>
+
+        <!--
+            Action MAIN
+            Menandakan activity utama
+        -->
+        <action android:name="android.intent.action.MAIN" />
+
+        <!--
+            Category LAUNCHER
+            Menandakan activity ini muncul di launcher
+        -->
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+    </application>
+
+    </manifest>

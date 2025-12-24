@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- Nama aplikasi yang ditampilkan di launcher dan title -->
+    <string name="app_name">FinDemy</string>
+
+</resources>
